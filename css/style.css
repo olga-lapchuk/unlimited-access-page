@@ -1,0 +1,386 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: url('../assets/images/bg.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 24px;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+}
+
+#time-display {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    position: absolute;
+    top: 14px;
+    left: 21.84px;
+    z-index: 1000;
+}
+
+.icon-close {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 72px;
+    left: 24px;
+    z-index: 1000;
+}
+
+.icon-signal {
+    width: 16px;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 74px;
+    z-index: 1000;
+    object-fit: contain;
+}
+
+.icon-wifi {
+    width: 16px;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 44px;
+    z-index: 1000;
+    object-fit: contain;
+}
+
+.icon-battery {
+    width: 16px;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 1000;
+    object-fit: contain;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+}
+
+.banner .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    padding-bottom: 20px;
+    margin-top: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#title {
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    margin: 40px 0 20px 0;
+    line-height: 1.2;
+}
+
+.product-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.product-option {
+    flex: 1;
+    position: relative;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 0;
+    max-width: 104px;
+}
+
+.product-option img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.product-option a {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1.2;
+    padding: 5px;
+}
+
+.pricing-container {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pricing .plan {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    max-width: 320px;
+    position: relative;
+}
+
+.pricing .plan.best {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #FFFFFF;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pricing .plan .plan-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.pricing .plan .best-offer {
+    background-color: #fff;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 10px;
+    position: absolute;
+    top: -15px;
+    right: 10px;
+}
+
+.pricing .plan .plan-price {
+    font-size: 16px;
+    color: #fff;
+    text-align: right;
+}
+
+.pricing .plan .description {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+    margin-top: 5px;
+}
+
+.btn-continue {
+    background-color: #fff;
+    color: #000;
+    padding: 14px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 320px;
+    display: block;
+    margin: 15px auto 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    font-size: 12.5px;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin-top: auto;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .btn {
+        height: 40px;
+        font-size: 14px;
+        padding: 0 16px;
+    }
+
+    .btn-continue {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .pricing .plan {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .pricing .plan .plan-title {
+        font-size: 12px;
+    }
+
+    .pricing .plan .plan-price {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .btn {
+        height: 45px;
+        font-size: 16px;
+        padding: 0 18px;
+    }
+
+    .btn-continue {
+        font-size: 18px;
+    }
+
+    .pricing .plan {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .pricing .plan .plan-title {
+        font-size: 14px;
+    }
+
+    .pricing .plan .plan-price {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .btn {
+        height: 50px;
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+    .btn-continue {
+        font-size: 20px;
+    }
+
+    .pricing .plan {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .pricing .plan .plan-title {
+        font-size: 16px;
+    }
+
+    .pricing .plan .plan-price {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .btn {
+        height: 55px;
+        font-size: 20px;
+        padding: 0 24px;
+    }
+
+    .btn-continue {
+        font-size: 22px;
+        padding: 12px 24px;
+    }
+
+    .pricing .plan {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .pricing .plan .plan-title {
+        font-size: 18px;
+    }
+
+    .pricing .plan .plan-price {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 431px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .btn {
+        height: 60px;
+        font-size: 22px;
+        padding: 0 28px;
+    }
+
+    .btn-continue {
+        font-size: 24px;
+        padding: 14px 28px;
+    }
+
+    .pricing .plan {
+        font-size: 20px;
+        padding: 14px;
+    }
+
+    .pricing .plan .plan-title {
+        font-size: 16px;
+    }
+
+    .pricing .plan .plan-price {
+        font-size: 16px;
+    }
+}
